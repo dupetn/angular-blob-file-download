@@ -14,9 +14,9 @@ export class AppComponent implements OnInit {
     const data = 'some text';
     const blob = new Blob([data], { type: 'application/octet-stream' });
 
-    this.fileUrl = this.sanitizer.bypassSecurityTrustResourceUrl(
-      window.URL.createObjectURL(blob)
-    );
+    // this.fileUrl = this.sanitizer.bypassSecurityTrustResourceUrl(
+    //   window.URL.createObjectURL(blob)
+    // );
     var url = window.URL.createObjectURL(blob);
     window.open(url);
   }
